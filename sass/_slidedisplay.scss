@@ -1,23 +1,23 @@
-.slide {
-.far-past, .past, .current, .future, .far-future {
+.slide.far-past {
   display: block;
+  margin-left: -200%;
 }
-.past, .current, .future {
+.slide.past {
   visibility: visible;
+  display: block;
+  margin-left: -100%;
 }
-.far-past {
-  margin-left: -2400px;
+.slide.current {
+  visibility: visible;
+  display: block;
+  margin-left: 0;
 }
-.past {
-  margin-left: -1400px;
+.slide.future {
+  visibility: visible;
+  display: block;
+  margin-left: 100%;
 }
-.current {
-  margin-left: -450px;
-}
-.future {
-  margin-left: 500px;
-}
-.far-future {
-  margin-left: 1500px;
-}
+.slide.far-future {
+  display: block;
+  margin-left: 200%;
 }

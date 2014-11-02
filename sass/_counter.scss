@@ -1,0 +1,15 @@
+
+.slide .counter {
+  color: #999999;
+  position: absolute;
+  left: 20px;
+  top: 90%;
+  display: block;
+  font-size: 0.7rem;
+}
+.slide.title > .counter,
+.slide.segue > .counter,
+.slide.mainTitle > .counter {
+  display: none;
+}
+#presentation-counter {display: none;}

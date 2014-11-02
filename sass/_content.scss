@@ -58,3 +58,58 @@ pre em {
   color: #18a600;
   text-shadow: #18a600 0 0 1px;
 }
+
+.content {
+  font-size: 2rem;
+}
+.content input, button {
+  font-size: 2rem;
+}
+.slide textarea.mynotes {
+    -webkit-appearance: none;
+    border: 1px #aaa solid;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.2rem;
+    font-style: italic;
+    box-shadow: inset 0 0 8px rgba(0,0,0,0.3);
+    padding: 5px;
+    box-sizing: border-box;
+    font-family:"Palatino Linotype", "Book Antiqua", Palatino, cursive,serif;
+   }
+
+.slide.intro {
+  text-align: center;
+  font-size: 2rem;
+}
+.slide.intro hgroup {
+  margin-top: 200px;
+}
+
+.slide.section,.slide.intro {
+  text-align: center;
+}
+.slide.section,.slide.intro header {
+  font-size: 2.5rem;
+}
+.slide li {
+    margin-bottom: 10px;
+}
+.slide p{
+  font-size: 2rem;
+}
+
+.force-render {
+  display: block;
+  visibility: hidden;
+}
+
+
+div.example {
+  display: block;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}

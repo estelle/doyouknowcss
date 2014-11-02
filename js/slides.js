@@ -373,9 +373,11 @@ SlideShow.prototype = {
       if (/^(input|textarea|pre|object)$/i.test(e.target.nodeName)) return;
 
 
+
       switch (e.keyCode) {
       case 37: // left arrow
       case 33: // left clicker
+            console.log(e);
        this.prev(); break;
       case 39: // right arrow
       case 32: // space

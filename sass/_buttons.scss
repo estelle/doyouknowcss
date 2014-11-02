@@ -1,0 +1,19 @@
+
+#next,
+#back {
+  z-index: 1000;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  list-style-type: none;
+  -webkit-appearance: none;
+  color: #ddd;
+  font-size: 1rem;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  border: none;
+  padding: 5px 10px;
+  letter-spacing:1px;
+  font-size: 1rem;
+}
+#next {left: auto; right: 5px;}
+
