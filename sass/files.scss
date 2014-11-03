@@ -1,0 +1,10 @@
+input {
+  font-size: 1.4rem;
+  &:invalid { background-color: pink;}
+  }
+p.result {position: absolute;
+ right: 20px;}
+
+@import "styleblock";
+@import "layout";
+@import "content";

@@ -1,0 +1,45 @@
+test
+{
+  margin: 0;
+  padding: 100px 0px 0px 0px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0px 0px 80px #000 inset;
+}
+.pill
+{ transform: scale(.5) rotate(-9deg);
+  position: absolute;
+  width: 500px;
+  height: 200px;
+  background-color: #cff;
+  margin: 0px auto;
+  text-align: center;
+
+  border-radius: 250px / 100px;
+
+  box-shadow:
+    0px -15px 15px #88f inset,
+    10px -15px 15px #44f inset,
+    -10px -15px 15px #fff inset,
+    -0px 15px #88f,
+    -35px 40px 5px rgba(0,0,0,0.5);
+
+  transition:
+    box-shadow .25s linear,
+    margin-top .25s linear;
+
+  color: #88f;
+  font-size: 100px;
+}
+.pill + .pill {
+  top: 80px;
+  left: 70px;
+}
+
+.pill div
+{
+  padding-top: 0px;
+  line-height: 170px;
+  text-shadow: 3px -3px 1px #44f, -3px 3px 1px #fff;
+  transform: scale(1,0.5);
+}

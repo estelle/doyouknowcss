@@ -12,4 +12,13 @@
 .slide.mainTitle > .counter {
   display: none;
 }
-#presentation-counter {display: none;}
+/* CSS Counter */
+body {counter-reset: pagecount;}
+.slide {counter-increment: pagecount;}
+.slide:after {
+  content: counter(pagecount);
+  color: pink;
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+}

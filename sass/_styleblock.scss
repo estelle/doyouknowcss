@@ -1,0 +1,15 @@
+
+head * {display: none;}
+head {display: block;}
+[contenteditable] {-webkit-user-modify: read-write-plaintext-only;}
+#editme {
+  color: white;
+  white-space: pre;
+  display: block;
+  margin: 20px;
+  font-family: monospace;
+}
+body {
+  margin: 20px;
+  line-height: 1.6;
+}

@@ -14,10 +14,16 @@ h1 {
   margin-bottom: 0px;
 }
 h2 {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
 }
 h1:first-child {
   margin-top: 0;
+}
+h3 {
+  font-size: 1.4rem
+}
+h4, p, li {
+  font-size: 1.2rem
 }
 section, footer {
   text-shadow: rgba(0, 0, 0, 0.2) 0 2px 5px;
@@ -38,14 +44,15 @@ a {
 a:hover {
   text-decoration: underline;
 }
-pre {
+pre, style {
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   padding: 10px 20px;
-  background: rgba(255,255,255, 0.5);
-  -moz-border-radius: 8px;
+  background: rgba(255,255,255, 0.1);
   border-radius: 8px;
-  border: 1px solid white;
+  border: 1px solid  rgba(255,255,255, 0.4);
+  line-height: 1.6;
+  tab-size: 2;
 }
 pre b {
   font-weight: normal;
