@@ -118,7 +118,7 @@ var Slide = function(node, idx) {
   if (this._node) {
     addClass(this._node, 'slide distant-slide');
   }
-  this._makeCounter();
+  //this._makeCounter();
   this._makeBuildList();
 };
 
@@ -152,7 +152,7 @@ Slide.prototype = {
   var _t = this;
     setTimeout(function(){ _t._runAutos(); } , 400);
   },
-
+/*
     _makeCounter: function() {
     if(!this._count || !this._node) { return; }
 
@@ -161,6 +161,7 @@ Slide.prototype = {
     c.className = 'counter';
     this._node.appendChild(c);
   },
+  */
 
     _makeBuildList: function() {
     this._buildList = [];
@@ -261,7 +262,7 @@ SlideShow.prototype = {
   _slides: [],
 
     _update: function(dontPush) {
-    document.querySelector('#presentation-counter').innerText = this.current;
+   // document.querySelector('#presentation-counter').innerText = this.current;
     if (history.pushState) {
       if (!dontPush) {
       history.pushState(this.current, 'Slide ' + this.current, '#slide' + this.current);
@@ -373,11 +374,11 @@ SlideShow.prototype = {
       if (/^(input|textarea|pre|object)$/i.test(e.target.nodeName)) return;
 
 
-
       switch (e.keyCode) {
+      case 8:
+        return;
       case 37: // left arrow
       case 33: // left clicker
-            console.log(e);
        this.prev(); break;
       case 39: // right arrow
       case 32: // space

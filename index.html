@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
-<title>Slide Deck</title>
+<title>Curing Your CSS Headaches</title>
 <!--
 Made by: Estelle Weyl
 Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
@@ -15,43 +15,169 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 
 <body>
 
-<!-- Top instructions -->
-<div id="topinfo"></div>
 <!-- footer instructions -->
 <div id="info">
     <p><a href="http://standardista.com">Estelle Weyl</a> | <a href="http://twitter.com/estellevw">@estellevw</a> | <a href="http://estelle.github.io">Github</a> | Press <span class="key">&rarr;</span> to advance, </p>
 </div>
 
   <div id="presentation">
-   <div id="presentation-counter"></div>
    <div id="slides">
 
     <div class="slide intro">
-     <header><hgroup>
-
-
-      <h2>Do You Know CSS?</h2>
+<div class="pill">
+  <div>Headache</div>
+</div>
+<div class="pill">
+  <div>Relief</div>
+</div>
+<header>
+  <h2>Do You Know CSS?</h2>
+</header>
       <h1>Estelle Weyl</h1>
-     </hgroup></header>
+      <h4>@estellevw</h3>
+      <h4>estelle.github.io/doyouknowcss?
     </div>
 
+
+
+<div class="slide normal">
+<header><h1>Counting</h1></header>
+<section class="content">
+<pre contenteditable>body {
+  counter-reset: pagecount;
+}
+.slide {
+  counter-increment: pagecount;
+}
+.slide:after {
+  content: counter(pagecount);
+  position: absolute; bottom: 2rem; left: 1rem;
+}</pre>
+</section>
+</div>
+
+
+<div class="slide">
+  <header><h1>Counter</h1></header>
+  <figure><object data="files/counter.html"></object></figure>
+</div>
+
+
+<div class="slide">
+  <header><h1>UI Selectors</h1></header>
+    <section class="content">
+    	<pre contenteditable>:enabled   :invalid  :placeholder-shown
+:disabled  :in-range     :user-error
+:checked   :out-of-range :indeterminate
+:default   :required     :read-only
+:valid     :optional     :read-write</pre>
+ <a href="http://codepen.io/estelle/pen/rDxvb" style="float:right; padding: 20px; font-size: 1rem;">Test page</a>   </section>
+</div>
+
+
+<div class="slide">
+  <header><h1>Specificity</h1></header>
+    <section class="content">
+    	<pre contenteditable>
+              *   { 0 - 0 - 0 }
+li, p, ::before   { 0 - 0 - 1 }
+ .class, [type]   { 0 - 1 - 0 }
+    #soPowerful   { 1 - 0 - 1 }</pre>
+    </section>
+</div>
+
+
+<div class="slide">
+  <header><h1>Being specific...</h1></header>
+    <section class="content">
+    	<pre contenteditable>
+            ul > li   { 0 - 0 - 2 }
+            ul   li   { 0 - 0 - 2 }
+
+            li ~ li   { 0 - 0 - 2 }
+li:nth-of-type(n+2)   { 0 - 1 - 1 }
+
+            h1 + h2   { 0 - 0 - 2 }
+          header h2   { 0 - 0 - 2 }</pre>
+    </section>
+</div>
+
+
+
+
+<div class="slide">
+  <header><h1>:not()</h1></header>
+    <section class="content">
+    	<pre contenteditable>
+                       li  { 0 - 0 - 1 }
+                  :not(li) { 0 - 0 - 1 }
+
+               .someClass  { 0 - 1 - 0 }
+          :not(.someClass) { 0 - 1 - 0 }
+
+                  #someId  { 1 - 0 - 0 }
+             :not(#someId) { 1 - 0 - 0 }
+
+     input[type=checkbox]  { 0 - 1 - 1 }
+input:not([type=checkbox]) { 0 - 1 - 1 }</pre>
+    </section>
+</div>
+
+<div class="slide">
+  <figure><object data="http://www.standardista.com/wp-content/uploads/2012/01/specificity3.pdf"></object></figure>
+</div>
+
+<div class="slide">
+
+<header><h1>!important</h1></header>
+  <figure><object data="files/important.html"></object></figure>
+</div>
+
+<div class="slide normal">
+<header><h1>!important</h1></header>
+<section class="content">
+<pre contenteditable>.disabled {cursor: default !important;}
+p.btn {cursor: pointer;}</pre>
+
+<pre contenteditable>.disabled.disabled.disabled {cursor: default;}
+p.btn {cursor: pointer;}</pre>
+</section>
+</div>
+
+
+<div class="slide">
+  <figure><object data="files/importantanimation.html"></object></figure>
+</div>
+
+<div class="slide normal">
+  <header><h1>Animation</h1></header>
+    <section class="content">
+    	<pre contenteditable></pre>
+    </section>
+</div>
+
+
+
+
     <div class="slide normal">
-<header><h1></h1></header>
+<header><h1>Animated Backgrounds</h1></header>
 <section class="content">
 <pre contenteditable></pre>
 </section>
 </div>
 
-
+<div class="slide">
+  <header><h1>Responsive Images</h1></header>
+    <section class="content">
+    </section>
+</div>
 
    </div>
 
 <header>
     <nav>
-        <ul>
-            <li class="button cancel" id="back">&laquo;Back</li>
-            <li class="button done" id="next">Next&raquo;</li>
-        </ul>
+            <a class="button cancel" id="back">&laquo;Back</a>
+            <a class="button done" id="next">Next&raquo;</a>
     </nav>
 </header>
 </div>
