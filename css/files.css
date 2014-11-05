@@ -27,6 +27,9 @@ body {
   margin: 20px;
   line-height: 1.6; }
 
+p {
+  padding-right: 40px; }
+
 :root {
   font-size: 162.5%; }
 

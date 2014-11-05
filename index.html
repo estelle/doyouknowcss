@@ -66,7 +66,7 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 <div class="slide">
   <header><h1>UI Selectors</h1></header>
     <section class="content">
-    	<pre contenteditable>:enabled   :invalid  :placeholder-shown
+    	<pre contenteditable>:enabled   :invalid      :placeholder-shown
 :disabled  :in-range     :user-error
 :checked   :out-of-range :indeterminate
 :default   :required     :read-only
@@ -147,44 +147,87 @@ p.btn {cursor: pointer;}</pre>
 
 <div class="slide">
 
-<header><h1>!MostImportant</h1></header>
+<header><h1>!Even More Important</h1></header>
   <figure><object data="files/importantanimation.html"></object></figure>
 </div>
 
 <div class="slide normal">
   <header><h1>Animation Quirks</h1></header>
     <section class="content">
-    	<pre contenteditable></pre>
+      <ul>
+        <li>!important igored in @keyframe &amp; original values
+        <li>animation-name: identifier (not string).
+        <li>Applied in order declared.
+        <li>Original values used if missing 0% or 100%.
+        <li>animation-iteration-count: O+ || infinite;
+        <li>Events: 1 animationstart, n animationiterations, 1 animationend
+        <li>Characters: animation-timing-function: steps(n, end);
     </section>
 </div>
 
+<div class="slide">
+  <header><h1>steps(4, end)</h1></header>
+    <section class="content">
+<ul class="stepsexplain">
+    <li><div></div>0%   </li>
+    <li><div></div>25%  </li>
+    <li><div></div>50%  </li>
+    <li><div></div>75%  </li>
+    <li><div></div>100% </li>
+</ul> <div class="biker"></div>
+</section>
+</div>
 
 <div class="slide">
   <header><h1>Cubic Bezier</h1></header>
-    <section class="content">
-    </section>
+  <figure><object data="files/print_timing_function.html"></object></figure>
 </div>
 
-    <div class="slide normal">
+    <div class="slide animbg">
 <header><h1>Animated Backgrounds</h1></header>
 <section class="content">
-<pre contenteditable></pre>
+<h1 style="position: absolute; top: 44%; width: 100%; text-align: center;">Animated background images with SVG</h1>
 </section>
 </div>
 
 
 <div class="slide">
-  <header><h1>SVG</h1></header>
+  <header><h1>SVG Rocks!</h1></header>
     <section class="content">
+      <ul>
+        <li>image
+        <li>animatable
+        <li>@media
+        <li>viewport = container
+        <li>supported
+        <li>raster
+        <li>data-URI
     </section>
 </div>
 
 
 <div class="slide">
-  <header><h1>Clown Car Technique</h1></header>
-    <section class="content">
-    </section>
+  <header>
+    <h1>Clown Car Technique  <label style="font-size:24px">Width <input type="range" min=200 max=1400 step=20 id="cctech"></label>
+</form></h1><form>
+
+    <h2>Object + Media Queries + SVG + CCimg</h2>
+  </header>
+  <object data="cc2.svg" id="ccobj" style="border:1px solid white;">
+<!--[if lte IE 8]>
+<img src="images/medium.png" alt="Fall back for IE">
+<![endif]-->
+</object>
+
+<script>
+    var range = document.getElementById('cctech');
+    range.addEventListener('change', function(){
+      document.getElementById('ccobj').style.width = range.value + "px";
+    });
+</script>
 </div>
+
+
 
 
 <div class="slide">
