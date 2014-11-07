@@ -76,7 +76,7 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
               *   { 0 - 0 - 0 }
 li, p, ::before   { 0 - 0 - 1 }
  .class, [type]   { 0 - 1 - 0 }
-    #soPowerful   { 1 - 0 - 1 }</pre>
+    #soPowerful   { 1 - 0 - 0 }</pre>
     </section>
 </div>
 
@@ -118,7 +118,7 @@ input:not([type=checkbox]) { 0 - 1 - 1 }</pre>
 </div>
 
 <div class="slide">
-  <figure><object data="http://www.standardista.com/wp-content/uploads/2012/01/specificity3.pdf"></object></figure>
+  <figure style="height: 80%; overflow: scroll;"><object data="http://www.standardista.com/wp-content/uploads/2012/01/specificity3.pdf"></object></figure>
 </div>
 
 <div class="slide">
@@ -221,7 +221,38 @@ p.btn {cursor: pointer;}</pre>
 </script>
 </div>
 
-
+<div class="slide">
+  <header><h1>Clown Car</h1></header>
+    <section class="content">
+      <pre contenteditable style="overflow: scroll;">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 329"
+  preserveAspectRatio="xMidYMid meet">
+ &lt;title>Clown Car&lt;/title>
+ &lt;style>
+  svg {
+    background-size: 100% 100%; background-repeat: no-repeat;
+  }
+ @media screen and (max-width: 300px) {
+  svg {background-image: url(images/small.png);
+  background-size: 158px;
+  }
+ }
+ @media screen and (min-width: 301px) and (max-width: 600px) {
+  svg {background-image: url(images/medium.png);
+  background-size: 300px;}
+ }
+ @media screen and (min-width: 601px) and (max-width: 900px) {
+  svg {background-image: url(images/big.png);
+  background-size: 600px;}
+ }
+ @media screen and (min-width: 901px) {
+  svg {background-image: url(images/huge.png);
+  background-size: 900px;}
+ }
+ &lt;/style>
+&lt;/svg></pre>
+    </section>
+</div>
 
 <div class="slide">
 
@@ -229,6 +260,11 @@ p.btn {cursor: pointer;}</pre>
   <figure><object data="files/supports.html"></object></figure>
 </div>
 
+<div class="slide">
+
+<header><h1>&lt;style&gt;</h1></header>
+  <figure><object data="files/style.html"></object></figure>
+</div>
 
 <div class="slide">
   <header><h1>The end!</h1></header>
