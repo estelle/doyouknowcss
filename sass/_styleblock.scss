@@ -1,7 +1,13 @@
 
-head * {display: none;}
-head {display: block;}
-[contenteditable] {-webkit-user-modify: read-write-plaintext-only;}
+head * {
+  display: none;
+}
+head {
+  display: block;
+}
+[contenteditable] {
+  -webkit-user-modify: read-write-plaintext-only;
+}
 #editme {
   color: white;
   white-space: pre;
