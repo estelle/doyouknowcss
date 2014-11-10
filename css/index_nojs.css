@@ -21,7 +21,7 @@ body {
   height: 100%;
   left: 0px;
   top: 0px;
-  background: #3a3a3a;
+  background: #333333;
   color: #ddd; }
 
 #info {
@@ -73,6 +73,7 @@ header, section {
   padding: 10px 20px; }
 
 .slide {
+  -webkit-transform: translate(100%, 0) scale(0.1) rotate(180deg);
   transform: translate(100%, 0) scale(0.1) rotate(180deg);
   position: absolute;
   overflow: hidden;
@@ -88,9 +89,11 @@ div > input, div > label {
   _position: absolute; }
 
 input:checked + label + .slide {
-  transform: translate(0%) scale(1) rotate(0deg); }
+  -webkit-transform: translate(0, 0) scale(1) rotate(0deg);
+  transform: translate(0, 0) scale(1) rotate(0deg); }
 
 input:checked + label + .slide + input:not(:checked) + label + .slide {
+  -webkit-transform: translate(45%, -50%) scale(0.2) rotate(-90deg);
   transform: translate(45%, -50%) scale(0.2) rotate(-90deg); }
 
 input:checked + label:after {
@@ -101,6 +104,7 @@ input:checked + label:after {
   width: 5em;
   background-color: #333;
   -webkit-transform: translatez(0);
+  transform: translatez(0);
   z-index: 5000;
   cursor: pointer; }
 
@@ -110,9 +114,11 @@ input:checked + label + .slide + input:not(:checked) {
   bottom: 20px;
   right: 20px;
   cursor: pointer;
-  -webkit-appearance: button;
+  -webkit-appearance: none;
+  appearance: none;
   color: #ccc;
   background-color: #333;
+  border: none;
   font-size: 1rem;
   width: 5em; }
   input:checked + label + .slide + input:not(:checked):after {
