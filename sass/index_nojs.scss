@@ -3,13 +3,16 @@ body {
 }
 .animbg {
   background: url(../images/svg.svg) 50% 50% repeat-x;
-
 }
-#slides > input,
-#slides > label {display: none;}
+header {
+  margin-bottom: 0;
+}
+section > pre:first-child {
+  margin-top: 0;
+}
 @import "layout";
 @import "slidedisplay";
-@import "slides";
+@import "slides_nojs";
 @import "counter";
 @import "buttons";
 @import "content";

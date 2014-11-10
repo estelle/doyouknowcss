@@ -1,0 +1,43 @@
+.slide {
+  transform: translate(100%, 0) scale(0.1) rotate(180deg);
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  top: 0; left: 0;
+  -webkit-transition: all 0.25s ease-in;
+  transition: all 0.25s ease-in;
+  background-color: #333;
+}
+div > input, div > label {
+ _position: absolute;
+}
+// current
+input:checked + label + .slide {
+  transform: translate(0%) scale(1) rotate(0deg);
+  }
+// next
+input:checked + label + .slide + input:not(:checked) + label + .slide{
+     transform: translate(45%, -50%) scale(0.2) rotate(-90deg);
+  }
+input:checked + label:after {
+  content: '<< back';
+  position:absolute; bottom: 20px; left: 20px;
+  width: 5em;
+  background-color: #333;
+  -webkit-transform: translatez(0);
+  z-index: 5000;
+  cursor: pointer;
+
+}
+input:checked + label + .slide + input:not(:checked) {
+  visibility: visible;
+  position:absolute; bottom: 20px; right: 20px;
+  cursor: pointer;
+  -webkit-appearance: button;
+  color: #ccc;
+  background-color: #333;
+  font-size: 1rem;
+  width: 5em;
+  &:after {content: 'next >>';}
+}
