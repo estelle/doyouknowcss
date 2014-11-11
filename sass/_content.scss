@@ -120,3 +120,11 @@ div.example {
   margin-bottom: 10px;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
+
+a[target=play] {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  background: black;
+  color: white;
+}
