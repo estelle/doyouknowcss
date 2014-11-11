@@ -3,7 +3,7 @@
  <title>Clown Car</title>
  <style>
   svg {
-    background-size: 100% 100%; background-repeat: no-repeat;
+    background-size: 100%; background-repeat: no-repeat;
   }
  @media screen and (max-width: 300px) {
   svg {background-image: url(images/small.png);

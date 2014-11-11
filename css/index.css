@@ -246,10 +246,19 @@ div.example {
 
 a[target=play] {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 40%;
   background: black;
-  color: white; }
+  color: white;
+  height: 40px;
+  width: 40px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%; }
+  a[target=play]:hover {
+    text-decoration: none;
+    color: pink;
+    font-weight: bold; }
 
 /* OBJECT PAGES */
 .object header {
@@ -338,7 +347,7 @@ figure {
   width: 90px; }
 
 .biker {
-  top: 100px;
+  top: 200px;
   left: 100px;
   width: 90px;
   background-color: white;
@@ -422,9 +431,6 @@ span[class^=os] {
 
 .os1900:hover ~ object {
   width: 1900px; }
-
-#ccobj3 {
-  max-width: 1400px; }
 
 @media print {
   .slide {

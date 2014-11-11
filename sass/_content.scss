@@ -123,8 +123,12 @@ div.example {
 
 a[target=play] {
   position: absolute;
-  top: 0;
+  top: 10px;
   left: 40%;
   background: black;
   color: white;
+  height: 40px; width: 40px; line-height:45px;
+  text-align: center;
+  border-radius: 50%;
+  &:hover {text-decoration: none; color: pink; font-weight: bold;}
 }
