@@ -39,6 +39,7 @@ input:checked + label + .slide + input:not(:checked) {
   position:absolute; bottom: 20px; right: 20px;
   cursor: pointer;
   -webkit-appearance: none;
+  -moz-appearance: groupbox;
   appearance: none;
   color: #ccc;
   background-color: #333;
