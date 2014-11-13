@@ -72,7 +72,8 @@ body {
 header, section {
   padding: 10px 20px; }
 
-.slide {
+.slide,
+.slide:not(:target) {
   -webkit-transform: translate(100%, 0) scale(0.1) rotate(180deg);
   transform: translate(100%, 0) scale(0.1) rotate(180deg);
   position: absolute;
@@ -85,18 +86,19 @@ header, section {
   transition: all 0.25s ease-in;
   background-color: #333; }
 
-div > input, div > label {
-  _position: absolute; }
-
-.slide:target {
+.slide:first-of-type,
+.slide:nth-of-type(2):target,
+.slide:first-of-type:not(:target) + a + .slide:target,
+body .slide:target {
   -webkit-transform: translate(0, 0) scale(1) rotate(0deg);
   transform: translate(0, 0) scale(1) rotate(0deg); }
 
-.slide:target + a + .slide {
+.slide:first-of-type + a + .slide,
+body .slide:target + a + .slide {
   -webkit-transform: translate(45%, -50%) scale(0.2) rotate(-90deg);
   transform: translate(45%, -50%) scale(0.2) rotate(-90deg); }
 
-.slide ~ a:after {
+.slide ~ a:before {
   content: '<< back';
   position: absolute;
   bottom: 20px;
@@ -108,7 +110,7 @@ div > input, div > label {
   z-index: 5000;
   cursor: pointer; }
 
-.slide:target ~ a:after {
+.slide:target ~ a:before {
   display: none; }
 
 #slides > a span {
@@ -117,24 +119,28 @@ div > input, div > label {
 .slide:target ~ a {
   display: none; }
 
-.slide:target + a + .slide + a {
+.slide:first-of-type + a + .slide + a,
+body .slide:target + a + .slide + a {
   display: block;
   visibility: visible;
   position: absolute;
   bottom: 20px;
   right: 20px;
   cursor: pointer;
-  -webkit-appearance: none;
-  -moz-appearance: groupbox;
-  appearance: none;
   color: #ccc;
   background-color: #333;
-  border: none;
   font-size: 1rem;
   width: 5em; }
-  .slide:target + a + .slide + a:after {
+  .slide:first-of-type + a + .slide + a:before,
+  body .slide:target + a + .slide + a:before {
+    display: none; }
+  .slide:first-of-type + a + .slide + a:after,
+  body .slide:target + a + .slide + a:after {
     content: 'next >>';
     display: block; }
+
+.slide:first-of-type:not(:target):after {
+  display: none; }
 
 .slide .counter {
   color: #999999;
