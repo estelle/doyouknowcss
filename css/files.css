@@ -1,7 +1,5 @@
 input {
   font-size: 1.4rem; }
-  input:invalid {
-    background-color: pink; }
 
 p.result {
   position: absolute;

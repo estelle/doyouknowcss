@@ -1,0 +1,23 @@
+body {
+  position: absolute;
+}
+.animbg {
+  background: url(../images/svg.svg) 50% 50% repeat-x;
+}
+header {
+  margin-bottom: 0;
+}
+section > pre:first-child {
+  margin-top: 0;
+}
+@import "layout";
+@import "slidedisplay";
+@import "slides_target";
+@import "counter";
+@import "buttons";
+@import "content";
+@import "objects";
+@import "figure";
+@import "steps";
+@import "objectsize";
+@import "print";

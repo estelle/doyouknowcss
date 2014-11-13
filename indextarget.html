@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>CSS you may not have considered</title>
+<!--
+Made by: Estelle Weyl
+Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
+-->
+<link rel="stylesheet" href="css/index_target.css"/>
+<style>
+
+</style>
+</head>
+
+<body>
+  <div id="presentation">
+   <div id="slides">
+
+<div id="title" class="slide intro">
+<header>
+  <h1 style="font-size: 3rem;">CSS? WTF!</h1>
+</header>
+      <h1>Estelle Weyl</h1>
+      <h4>@estellevw</h3>
+      <h4>estelle.github.io/doyouknowcss?</h4>
+    </div>
+<a href="#title" checked><span>Intro</span></a>
+
+
+<div id="counting" class="slide normal">
+<header><h1>Counting</h1></header>
+<section class="content">
+<pre contenteditable>body {
+  counter-reset: pagecount;
+}
+.slide {
+  counter-increment: pagecount;
+}
+.slide:after {
+  content: counter(pagecount);
+  position: absolute; bottom: 2rem; left: 1rem;
+}</pre>
+</section>
+</div>
+
+<a href="#counting"><span>counting</span></a>
+
+<div id="counter" class="slide">
+  <header><h1>Counter</h1></header>
+  <figure><object data="files/counter.html"></object></figure>
+  <a href="files/counter.html" target="play" title="open code example in new window">↪</a>
+</div>
+
+<a href="#counter"><span>Counter</span></a>
+
+<div id="chkbx" class="slide">
+  <header><h1>UI Selectors</h1></header>
+    <section class="content">
+    	<pre contenteditable>:enabled   :invalid      :placeholder-shown
+:disabled  :in-range     :user-error
+:checked   :out-of-range :indeterminate
+:default   :required     :read-only
+:valid     :optional     :read-write</pre>
+ <a href="http://codepen.io/estelle/pen/rDxvb" style="float:right; padding: 20px; font-size: 1rem;">Test page</a>   </section>
+</div>
+<a href="#chkbx"><span>UI Selectors</span></a>
+
+<div id="specificity" class="slide">
+  <header><h1>Specificity</h1></header>
+    <section class="content">
+    	<pre contenteditable>
+              *   { 0 - 0 - 0 }
+li, p, ::before   { 0 - 0 - 1 }
+ .class, [type]   { 0 - 1 - 0 }
+    #soPowerful   { 1 - 0 - 0 }</pre>
+    </section>
+</div>
+<a href="#specificity"><span>Specificity</span></a>
+
+<div id="combinators"  class="slide">
+  <header><h1>Being specific...</h1></header>
+    <section class="content">
+    	<pre contenteditable>
+            ul > li   { 0 - 0 - 2 }
+            ul   li   { 0 - 0 - 2 }
+
+            li ~ li   { 0 - 0 - 2 }
+li:nth-of-type(n+2)   { 0 - 1 - 1 }
+
+            h1 + h2   { 0 - 0 - 2 }
+          header h2   { 0 - 0 - 2 }</pre>
+    </section>
+</div>
+<a href="#combinators"><span>Being Specific</span></a>
+
+
+<div id="not"  class="slide">
+  <header><h1>:not()</h1></header>
+    <section class="content">
+    	<pre contenteditable>
+                       li  { 0 - 0 - 1 }
+                  :not(li) { 0 - 0 - 1 }
+
+               .someClass  { 0 - 1 - 0 }
+          :not(.someClass) { 0 - 1 - 0 }
+
+                  #someId  { 1 - 0 - 0 }
+             :not(#someId) { 1 - 0 - 0 }
+
+     input[type=checkbox]  { 0 - 1 - 1 }
+input:not([type=checkbox]) { 0 - 1 - 1 }</pre>
+    </section>
+</div>
+<a href="#not"><span>Negation</span></a>
+
+<div id="specifishity" class="slide">
+  <figure style="height: 80%; overflow: scroll;"><img src="images/specificity3.png" alt="CSS Specifishity Chart" style="width: 800px; height: auto; background-color: #eee"/></figure><a href="http://specifishity.com" target="play" title="open code example in new window">↪</a>
+</div>
+<a href="#specifishity"><span>Specifishity</span></a>
+
+<div id="imp"  class="slide">
+<header><h1>!important</h1></header>
+  <figure><object data="files/important.html"></object></figure>
+  <a href="files/important.html" target="play" title="open code example in new window">↪</a>
+</div>
+<a href="#imp"><span>!important</span></a>
+
+<div id="repeatclass"  class="slide normal">
+<header><h1>multiple class declarations instead of !important</h1></header>
+<section class="content">
+<pre contenteditable>.disabled {cursor: default !important;}
+p.btn {cursor: pointer;}</pre>
+
+<pre contenteditable>.disabled.disabled.disabled {cursor: default;}
+p.btn {cursor: pointer;}</pre>
+</section>
+</div>
+<a href="#repeatclass"><span>Repeat Class</span></a>
+
+
+<div id="moreimp"  class="slide">
+<header><h1>!Even More Important</h1></header>
+  <figure><object data="files/importantanimation.html"></object></figure>
+  <a href="files/importantanimation.html" target="play" title="open code example in new window">↪</a>
+</div>
+<a href="#moreimp"><span>Overriding !important</span></a>
+
+<div id="animrules"  class="slide normal">
+  <header><h1>Animation Quirks</h1></header>
+    <section class="content">
+      <ul>
+        <li>!important igored in @keyframe &amp; original values
+        <li>animation-name: identifier (not string).
+        <li>Applied in order declared.
+        <li>Original values used if missing 0% or 100%.
+        <li>animation-iteration-count: O+ || infinite;
+        <li>Events: 1 animationstart, n animationiterations, 1 animationend
+        <li>Characters: animation-timing-function: steps(n, end);
+    </section>
+</div>
+<a href="#animrules"><span>Animation Gotchas</span></a>
+
+<div id="steps"  class="slide">
+  <header> <h1>steps(4, end)</h1></header>
+    <section class="content">
+<pre contenteditable>@keyframes pedal { 100% {background-position: -360px 0;}}</pre>
+<ul class="stepsexplain">
+    <li><div></div>0%   </li>
+    <li><div></div>25%  </li>
+    <li><div></div>50%  </li>
+    <li><div></div>75%  </li>
+    <li><div></div>100% </li>
+</ul> <div class="biker"></div>
+</section>
+</div>
+<a href="#steps"><span>Sprite Animation</span></a>
+
+
+<div id="timing"  class="slide">
+  <header><h1>Cubic Bezier</h1></header>
+  <figure><object data="files/print_timing_function.html"></object></figure>
+  <a href="files/print_timing_function.html" target="play" title="open code example in new window">↪</a>
+</div>
+<a href="#timing"><span>Understanding Cubic Bezier</span></a>
+
+
+
+<div id="svg" class="slide animbg">
+<header><h1>Animated Backgrounds</h1></header>
+<section class="content">
+<h1 style="position: absolute; top: 44%; width: 100%; text-align: center;">Animated background images with SVG</h1>
+</section>
+<a href="http://codepen.io/gpyne/pen/Lqvxo" target="play" title="open code example in new window">↪</a>
+</div>
+<a href="#svg"><span>Animating backgrounds with SVG</span></a>
+
+
+<div id="svgpro"  class="slide">
+  <header><h1>SVG Rocks!</h1></header>
+    <section class="content">
+      <ul>
+        <li>image
+        <li>animatable
+        <li>@media
+        <li>viewport = container
+        <li>supported
+        <li>raster
+        <li>data-URI
+    </section>
+</div>
+<a href="#svgpro"><span>SVG Awesomesauce</span></a>
+
+
+<div id="cct"  class="slide">
+  <header>
+    <h1>Clown Car Technique
+  </header>
+<span class="os100">H</span><span class="os200">O</span><span class="os300">V</span><span class="os400">E</span><span class="os500">R</span><span class="os600">&nbsp;</span><span class="os700">O</span><span class="os800">V</span><span class="os900">E</span><span class="os1000">R</span><span class="os1100">&nbsp;</span><span class="os1200">M</span><span class="os1300">E</span><span class="os1400">!</span>
+  <br/>
+  <object data="cc2.svg" id="ccobj" style="border:1px solid white; ">
+<!--[if lte IE 8]>
+<img src="images/medium.png" alt="Fall back for IE">
+<![endif]-->
+</object>
+</div>
+<a href="#cct"><span>Responsive Images</span></a>
+
+<div id="cct2"  class="slide">
+  <header>
+    <h1>Object + Media Queries + SVG + CCimg</h1>
+  </header><span class="os100">H</span><span class="os200">O</span><span class="os300">V</span><span class="os400">E</span><span class="os500">R</span><span class="os600">&nbsp;</span><span class="os700">O</span><span class="os800">V</span><span class="os900">E</span><span class="os1000">R</span><span class="os1100">&nbsp;</span><span class="os1200">M</span><span class="os1300">E</span><span class="os1400">!</span>
+  <br/>
+  <object data="cc3.svg" id="ccobj3" style="border:1px solid white; ">
+<!--[if lte IE 8]>
+<img src="images/medium.png" alt="Fall back for IE">
+<![endif]-->
+</object>
+</div>
+<a href="#cct2"><span>Responsive Images</span></a>
+
+
+<div id="cctsvg"  class="slide">
+  <header><h1>Clown Car</h1></header>
+    <section class="content">
+      <pre contenteditable style="overflow: scroll;">
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 329"
+  preserveAspectRatio="xMidYMid meet">
+ &lt;title>Clown Car&lt;/title>
+ &lt;style>
+  svg {
+    background-repeat: no-repeat;
+    <strong style="color: yellow">background-size: auto;</strong>
+  }
+ @media screen and (max-width: 300px) {
+  svg {background-image: url(images/small.png);
+  }
+ }
+ @media screen and (min-width: 301px) and (max-width: 600px) {
+  svg {background-image: url(images/medium.png);}
+ }
+ @media screen and (min-width: 601px) and (max-width: 900px) {
+  svg {background-image: url(images/big.png);
+  }
+ }
+ @media screen and (min-width: 901px) {
+  svg {background-image: url(images/huge.png);
+  }
+ }
+ &lt;/style>
+&lt;/svg></pre>
+    </section>
+</div>
+<a href="#cctsvg"><span>Clown Car Code</span></a>
+
+<div id="supports"  class="slide">
+<header><h1>@supports</h1></header>
+  <figure><object data="files/supports.html"></object></figure>
+  <a href="files/supports.html" target="play" title="open code example in new window">↪</a>
+</div>
+<a href="#supports"><span>@supports</span></a>
+
+<div id="style" class="slide">
+<header><h1>&lt;style&gt;</h1></header>
+  <figure><object data="files/style.html"></object></figure>
+  <a href="files/style.html" target="play" title="open code example in new window">↪</a>
+</div>
+<a href="#style"><span>Editing Styles Live</span></a>
+
+<div id="deck"  class="slide">
+<header><h1>&lt;style&gt;</h1></header>
+  <figure><object data="files/deck.html"></object></figure>
+</div>
+<a href="#deck"><span>Understanding this slide deck</span></a>
+
+<div id="lastslide"  class="slide">
+  <header><h1>The end!</h1></header>
+    <section class="content">
+    </section>
+</div>
+<a href="#lastslide"><span>Last Slide</span></a>
+
+
+
+
+   </div>
+</div>
+
+  </body>
+
+</html>
+
