@@ -4,8 +4,11 @@
   <meta charset="utf-8"/>
   <title>!important</title>
   <link rel="stylesheet" href="../css/files.css">
-  <style contenteditable id="editme">li { text-decoration: white !important;}
-li {animation: red forwards;}
+  <style contenteditable id="editme">li { color: white !important;}
+li {-webkit-animation: red forwards; animation: red forwards;}
+@-webkit-keyframes red {
+  100% { color: #f33; }
+}
 @keyframes red {
   100% { color: #f33; }
 }</style>
