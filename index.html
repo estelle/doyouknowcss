@@ -26,6 +26,8 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
       <h1>Estelle Weyl</h1>
       <h4>@estellevw</h3>
       <h4>estelle.github.io/doyouknowcss?</h4>
+      <a href="indexjs.html" style="font-size: 1rem; color: #999; text-decoration: underline;">If you need JS</a><br/>
+      <a href="indextarget.html" style="font-size: 1rem; color: #999; text-decoration: underline;">With :target</a>
     </div>
 
 
@@ -43,7 +45,7 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 }
 .slide:after {
   content: counter(pagecount);
-  position: absolute; bottom: 2rem; left: 1rem;
+  position: absolute; bottom: 2rem; left: 1rem; color: pink;
 }</pre>
 </section>
 </div>
@@ -170,7 +172,7 @@ p.btn {cursor: pointer;}</pre>
   <header><h1>Animation Quirks</h1></header>
     <section class="content">
       <ul>
-        <li>!important igored in @keyframe &amp; original values
+        <li>!important ignored in @keyframe &amp; original values
         <li>animation-name: identifier (not string).
         <li>Applied in order declared.
         <li>Original values used if missing 0% or 100%.
