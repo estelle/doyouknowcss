@@ -19,7 +19,10 @@ head {
   white-space: pre;
   display: block;
   margin: 20px;
-  font-family: monospace; }
+  font-family: monospace;
+  -webkit-user-modify: read-write-plaintext-only;
+  -moz-user-modify: read-write;
+  user-modify: read-write; }
 
 body {
   margin: 20px;
