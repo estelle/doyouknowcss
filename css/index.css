@@ -347,30 +347,24 @@ figure {
   width: 90px; }
 
 .biker {
-  top: 200px;
+  top: 300px;
   left: 100px;
   width: 90px;
   background-color: white;
   border-radius: 50%;
   box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.3), inset -3px -3px 3px rgba(0, 0, 0, 0.3), 3px 3px 3px rgba(0, 0, 0, 0.2);
-  border: 3px black solid;
-  -webkit-animation: pedal 400ms steps(4, end) infinite;
-  animation: pedal 400ms steps(4, end) infinite; }
+  border: 3px black solid; }
 
 @-webkit-keyframes pedal {
   0% {
     background-position: 0 0; }
-
   100% {
     background-position: -360px 0; } }
-
 @keyframes pedal {
   0% {
     background-position: 0 0; }
-
   100% {
     background-position: -360px 0; } }
-
 span[class^=os] {
   display: inline-block;
   padding: 3px; }
@@ -442,7 +436,6 @@ span[class^=os] {
 
   @page {
     size: landscape; }
-
   body {
     font-size: 12pt;
     background: white; }
@@ -453,3 +446,5 @@ span[class^=os] {
 
   #info, #topinfo, .counter {
     display: none; } }
+
+/*# sourceMappingURL=index.css.map */

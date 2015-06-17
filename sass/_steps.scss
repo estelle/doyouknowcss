@@ -47,7 +47,7 @@
 }
 
 .biker {
-  top: 200px;
+  top: 300px;
   left: 100px;
   width: 90px;
   background-color: white;
@@ -56,8 +56,6 @@
               inset -3px -3px 3px rgba(0,0,0,0.3),
              3px 3px 3px rgba(0,0,0,0.2);
   border: 3px black solid;
-  -webkit-animation: pedal 400ms steps(4, end) infinite;
-  animation: pedal 400ms steps(4, end) infinite;
 }
 
 @-webkit-keyframes pedal {

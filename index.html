@@ -30,7 +30,7 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
       <a href="indextarget.html" style="font-size: 1rem; color: #999; text-decoration: underline;">With :target</a>
     </div>
 
-<input type="checkbox" id="chkbx_awesome" checked>
+<input type="checkbox" id="chkbx_awesome">
 <label for="chkbx_awesome"><span>Awesome</span></label>
 <div class="slide">
 <header><h1>CSS is Awesome</h1></header>
@@ -38,7 +38,7 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
   <a href="files/awesome.html" target="play" title="open code example in new window">↪</a>
 </div>
 
-<input type="checkbox" id="chkbx_vertical" checked>
+<input type="checkbox" id="chkbx_vertical">
 <label for="chkbx_vertical"><span>Vertical Centering</span></label>
 <div class="slide">
 <header><h1>Vertical Centering</h1></header>
@@ -46,7 +46,7 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
   <a href="files/vertical.html" target="play" title="open code example in new window">↪</a>
 </div>
 
-<input type="checkbox" id="chkbx_baseline" checked>
+<input type="checkbox" id="chkbx_baseline">
 <label for="chkbx_baseline"><span>Align baseline</span></label>
 <div class="slide">
 <header><h1>Aligning by baseline</h1></header>
@@ -58,18 +58,8 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 <label for="chkbx_counting"><span>Counting</span></label>
 <div class="slide normal">
 <header><h1>Counting</h1></header>
-<section class="content">
-<pre contenteditable>body {
-  counter-reset: pagecount;
-}
-.slide {
-  counter-increment: pagecount;
-}
-.slide:after {
-  content: counter(pagecount);
-  position: absolute; bottom: 2rem; left: 1rem; color: pink;
-}</pre>
-</section>
+  <figure><object data="files/counting.html"></object></figure>
+  <a href="files/counting.html" target="play" title="open code example in new window">↪</a>
 </div>
 
 
@@ -208,16 +198,8 @@ p.btn {cursor: pointer;}</pre>
 <label for="chkbx_steps"><span>Sprite Animation</span></label>
 <div class="slide">
   <header> <h1>steps(4, end)</h1></header>
-    <section class="content">
-<pre contenteditable>@keyframes pedal { 100% {background-position: -360px 0;}}</pre>
-<ul class="stepsexplain">
-    <li><div></div>0%   </li>
-    <li><div></div>25%  </li>
-    <li><div></div>50%  </li>
-    <li><div></div>75%  </li>
-    <li><div></div>100% </li>
-</ul> <div class="biker"></div>
-</section>
+  <figure><object data="files/steps.html"></object></figure>
+  <a href="files/steps.html" target="play" title="open code example in new window">↪</a>
 </div>
 
 <input type="checkbox" id="chkbx_timing">

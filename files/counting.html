@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>CSS is Awesome</title>
+  <link rel="stylesheet" href="../css/files.css">
+  <style contenteditable id="editme">body {
+  counter-reset: pagecount;
+}
+.slide {
+  counter-increment: pagecount;
+}
+.slide:after {
+  content: counter(pagecount);
+  position: absolute; bottom: 2rem; left: 1rem; color: pink;
+}</style>
+</head>
+
+<body>
+<p class="slide"></p>
+
+
+</body>
+</html>
+
