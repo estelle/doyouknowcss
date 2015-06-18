@@ -5,19 +5,23 @@
   <title>CSS is Awesome</title>
   <link rel="stylesheet" href="../css/files.css">
   <style contenteditable id="editme">body {
-  counter-reset: pagecount;
+  counter-reset: pagecount; clear: both;
 }
-.slide {
+.aslide {
   counter-increment: pagecount;
 }
-.slide:after {
+.aslide:after {
   content: counter(pagecount);
-  position: absolute; bottom: 2rem; left: 1rem; color: pink;
+  //position: absolute; 
+  //bottom: -3rem; left: 5rem; color: pink;
+  //font-size: 15em;
+  //pointer-events: none;
 }</style>
 </head>
 
 <body>
-<p class="slide"></p>
+<p class="aslide" style="position: absolute; bottom: 5rem;">pointer-events: none;
+</p>
 
 
 </body>

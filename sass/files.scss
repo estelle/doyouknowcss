@@ -4,6 +4,7 @@ input {
   }
 p.result {position: absolute;
  right: 20px;}
+ pre {font-family: monospace;}
 
 @import "styleblock";
 @import "layout";

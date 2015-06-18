@@ -5,6 +5,9 @@ p.result {
   position: absolute;
   right: 20px; }
 
+pre {
+  font-family: monospace; }
+
 head * {
   display: none; }
 
