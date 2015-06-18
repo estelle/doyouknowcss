@@ -23,7 +23,7 @@ div:after {
   right: 0;
   position: absolute;
   background-image:url(iphone_mask_large.jpg);
-  -webkit-mask: url(iphone_mask_mask.png); 
+  mask: url(iphone_mask_mask.png); 
 	
 }
 
