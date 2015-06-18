@@ -24,6 +24,7 @@ head {
   margin: 20px;
   font-family: monospace;
   -webkit-user-modify: read-write-plaintext-only;
+  -webkit-user-modify: read-write;
   -moz-user-modify: read-write;
   user-modify: read-write; }
 

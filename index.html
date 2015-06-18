@@ -227,21 +227,88 @@ p.btn {cursor: pointer;}</pre>
   <header><h1>SVG Rocks!</h1></header>
     <section class="content">
       <ul>
-        <li>image
-        <li>animatable
-        <li>@media
-        <li>viewport = container
-        <li>supported
-        <li>raster
-        <li>data-URI
+        <li>image</li>
+        <li>animatable</li>
+        <li>@media</li>
+        <li>viewport = container</li>
+        <li>supported</li>
+        <li>raster</li>
+        <li>data-URI</li>
+        <li>masking</li>
+      </ul>
     </section>
 </div>
 
 
 
 
+<!-- Reduce File Size - JPG not PNG, with Masking -->
+
+<input type="checkbox" id="chkbx_mask">
+<label for="chkbx_mask"><span>CSS Masking</span></label>
+<div class="slide">
+     <header>
+      <h1>CSS Masking</h1>
+     </header>
+     <section>
+
+     <p class="onehundred">
+     <img src="images/frame.jpg" alt="jpeg" width="160">
+     <img src="images/plus.gif" alt="plus" width="100">
+     <img src="images/framemask.png" alt="framemask" width="160">
+     <img src="images/lessthan.gif" alt="less than" width="100">
+     <img src="images/frame2.png" alt="transparent png" width="160"><br>
+     <span style="width: 160px;">88KB</span>
+     <span style="width: 100px;"> + </span>
+     <span style="width: 160px;"> 4KB </span>
+     <span style="width: 100px;"> &lt; </span>
+     <span style="width: 160px;"> 551KB</span>
+     </p>
+     <pre contenteditable>div {
+  background-image:url(images/frame.jpg);
+  -webkit-mask: url(images/framemask.png);
+}</pre>
+     </section>
+    </div>
 
 
+
+<input type="checkbox" id="chkbx_maskingexample">
+<label for="chkbx_maskingexample"><span>Masking Example</span></label>
+<div class="slide">
+  <header><h1>Masking Example</h1></header>
+  <figure><object data="mask/index.html"></object></figure>
+  <a href="mask/index.html" target="play" title="open code example in new window">↪</a>
+</div>
+
+
+<input type="checkbox" id="chkbx_shapes_all">
+<label for="chkbx_shapes_all"><span>CSS Shapes</span></label>
+ <div class="slide">
+     <header><h1>CSS Shapes</h1></header>
+
+     <figure><object data="files/shapes_all.html"></object></figure>
+  <a href="files/shapes_all.html" target="play" title="open code example in new window">↪</a>
+ </div>
+
+<input type="checkbox" id="chkbx_shapes_all2">
+<label for="chkbx_shapes_all2"><span>CSS Shapes</span></label>
+ <div class="slide">
+     <header><h1>CSS Shapes 2</h1></header>
+
+     <figure><object data="files/shapes_all2.html"></object></figure>
+  <a href="files/shapes_all2.html" target="play" title="open code example in new window">↪</a>
+ </div>
+
+
+<input type="checkbox" id="chkbx_cssshapes">
+<label for="chkbx_cssshapes"><span>CSS Shapes</span></label>
+ <div class="slide">
+     <header><h1>CSS Shapes</h1></header>
+
+     <figure><object data="files/shapes_poly.html"></object></figure>
+  <a href="files/shapes_poly.html" target="play" title="open code example in new window">↪</a>
+ </div>
 
 
 
@@ -423,12 +490,34 @@ p.btn {cursor: pointer;}</pre>
   <figure><object data="files/deck.html"></object></figure>
 </div>
 
-<input type="checkbox" id="chkbx">
-<label for="chkbx"><span></span></label>
+<input type="checkbox" id="chkbx_x">
+<label for="chkbx_x"><span></span></label>
 <div class="slide intro">
   <header><h1>The end!</h1></header>
     <section class="content">
       http://estelle.github.io/doyouknowcss/
+    </section>
+</div>
+
+
+<input type="checkbox" id="chkbx_resources">
+<label for="chkbx_resources"><span></span></label>
+<div class="slide">
+  <header><h1>Resources</h1></header>
+    <section class="content">
+<ul>
+  <li>This talk: <a href="http://estelle.github.io/doyouknowcss/">http://estelle.github.io/doyouknowcss/</a></li>
+  <li>Specificity: <a href="http://estelle.github.io/selectors/">http://estelle.github.io/selectors/</a></li>
+  <li>Specificity: <a href="http://specifishity.com">www.SpeciFISHity.com</a></li>
+  <li>Animation Deep Dive: <a href="http://estelle.github.io/animation/">http://estelle.github.io/animation/</a></li>
+  <li>ClownCar Technique: <a href="http://www.smashingmagazine.com/2013/06/02/clown-car-technique-solving-for-adaptive-images-in-responsive-web-design/">www.smashingmagazine.com</a></li>
+  <li>Material Design: <a href="http://google.com/design/icons">http://google.com/design/icons</a></li>
+  <li>Icon Names/Numbers: <a href="https://github.com/google/material-design-icons/blob/master/iconfont/codepoints">https://github.com/google/material-design-icons/</a></li>
+  <li>Font Squirrel: <a href="http://www.fontsquirrel.com/tools/webfont-generator">www.fontsquirrel.com/tools/webfont-generator</a></li>
+  <li>Google Fonts: <a href="http://www.google.com/fonts">www.google.com/fonts</a></li>
+  <li>Optimizing Google Fonts: <a href="http://deanhume.com/Home/BlogPost/optimising-google-fonts-for-fast-load-times/10125">http://deanhume.com/</a></li>
+  <li>CSS Shapes Editor: <a href="http://razvancaliman.com/writing/css-shapes-editor-chrome/">razvancaliman.com/writing/css-shapes-editor-chrome/</a></li>
+  <li><a href=""></a></li>
     </section>
 </div>
 
