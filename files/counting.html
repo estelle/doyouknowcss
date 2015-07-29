@@ -4,24 +4,22 @@
   <meta charset="utf-8"/>
   <title>CSS is Awesome</title>
   <link rel="stylesheet" href="../css/files.css">
-  <style contenteditable id="editme">body {
-  counter-reset: pagecount; clear: both;
-}
-.aslide {
+  <style contenteditable id="editme">body { counter-reset: pagecount; }
+p {   color: white;
   counter-increment: pagecount;
 }
-.aslide:after {
+p:after { color: magenta;
   content: counter(pagecount);
-  //position: absolute; 
-  //bottom: -3rem; left: 5rem; color: pink;
-  //font-size: 15em;
-  //pointer-events: none;
+
 }</style>
 </head>
 
 <body>
-<p class="aslide" style="position: absolute; bottom: 5rem;">pointer-events: none;
-</p>
+<p>Paragraph</p> 
+<p>Paragraph</p> 
+<p>Paragraph</p> 
+<p>Paragraph</p> 
+<p>Paragraph</p> 
 
 
 </body>

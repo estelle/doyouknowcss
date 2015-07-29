@@ -86,6 +86,7 @@ head {
   margin: 20px;
   font-family: monospace;
   -webkit-user-modify: read-write-plaintext-only;
+  -webkit-user-modify: read-write;
   -moz-user-modify: read-write;
   user-modify: read-write; }
 
@@ -210,7 +211,8 @@ pre, style {
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   line-height: 1.6;
-  tab-size: 2; }
+  tab-size: 2;
+  -webkit-user-modify: read-write-plaintext-only; }
 
 pre b {
   font-weight: normal;

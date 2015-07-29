@@ -8,6 +8,7 @@ Made by: Estelle Weyl
 Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 -->
 <link rel="stylesheet" href="css/index_nojs.css"/>
+<base target="play"/>
 <style>
 
 </style>
@@ -73,7 +74,7 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 
 
 <input type="checkbox" id="chkbx">
-<label for="chkbx"><span></span></label>
+<label for="chkbx"><span>UI Selectors</span></label>
 <div class="slide">
   <header><h1>UI Selectors</h1></header>
     <section class="content">
@@ -82,7 +83,10 @@ Copyright:  CC-SA-NC-BY - Creative Commons Attribution-NonCommercial-ShareAlike
 :checked   :out-of-range :indeterminate
 :default   :required     :read-only
 :valid     :optional     :read-write</pre>
- <a href="http://codepen.io/estelle/pen/rDxvb" style="float:right; padding: 20px; font-size: 1rem;">Test page</a>   </section>
+
+<pre contenteditable>[aria-required]
+[aria-invalid="true"]</pre>
+ <a href="http://codepen.io/estelle/pen/rDxvb" style="float:right; padding: 20px; font-size: 1rem;" target="play">↪</a>   </section>
 </div>
 
 
@@ -210,6 +214,14 @@ p.btn {cursor: pointer;}</pre>
   <a href="files/print_timing_function.html" target="play" title="open code example in new window">↪</a>
 </div>
 
+<input type="checkbox" id="anim_js">
+<label for="chkbx_timing"><span>CSSKeyframeRules</span></label>
+<div class="slide">
+  <header><h1>CSSKeyframeRules: <br/>deleteRule(), appendRule(), findRule()</h1></header>
+  <figure><object data="http://codepen.io/estelle/full/dogmoG/"></object></figure>
+  <a href="http://codepen.io/estelle/pen/dogmoG" target="play" title="open code example in new window">↪</a>
+</div>
+
     <input type="checkbox" id="chkbx_svg">
 <label for="chkbx_svg"><span>Animated SVG as Backgrounds</span></label>
 <div class="slide animbg">
@@ -267,7 +279,7 @@ p.btn {cursor: pointer;}</pre>
      <header><h1>CSS Shapes</h1></header>
 
      <figure><object data="files/shapes_poly.html"></object></figure>
-  <a href="files/shapes_poly.html" target="play" title="open code example in new window">↪</a>
+  <a href="files/shapes_poly2.html" target="play" title="open code example in new window">↪</a>
  </div>
 
 
@@ -471,7 +483,7 @@ p.btn {cursor: pointer;}</pre>
 <header><h1>Other features</h1></header>
 <section class="content">
 &lt;pre contenteditable><pre contenteditable>
-  touch-events: none;
+  pointer-events: none;
 
   -webkit-user-modify: read-write-plaintext-only;
   -moz-user-modify: read-write;
